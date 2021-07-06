@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>new page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div align="center" class="row">
+   <h1>Create new Student</h1>
+   <br>
+   
+   <div class="col-sm-4">
+   <form action="#" th:action="@{/save}" th:object="${student}" method="post">
+   
+   <div class="row">
+       <label class="form-label">Student Name</label>
+         <input type="hidden" th:field="+{id}" />
+         <input type="text" th:field="+{sname}" class="form-control" placeholder="student name" />
+    <br>
+       <label class="form-label">Course</label>
+       <input type="text" th:field="+{course}" class="form-control" placeholder="Student Course" />
+    <br>
+        <label class="form-label">Fees</label>
+        <input type="text" th:field="+{fees}" class="form-control" placeholder="Student Course fees" />
+   </div>    
+     </form>     
+   </div>
+</div>
+</body>
+</html>
